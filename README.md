@@ -54,8 +54,8 @@ Este proyecto utiliza **Terraform** para gestionar la infraestructura y **GitHub
 1. **Clonar el repositorio**:
 
    ```bash
-   git clone https://github.com/tu-usuario/711-incident-infrastructure.git
-   cd 711-incident-infrastructure
+   git clone https://github.com/JACarlin/MonoInfrastructure.git
+   cd MonoInfrastructure
 
 Configurar el Backend de Terraform: El estado de Terraform se almacena en un contenedor de Azure Storage. Para configurarlo, asegúrate de definir las variables de tu contenedor en `providers.tf`.
 
