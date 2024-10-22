@@ -170,3 +170,19 @@ resource "null_resource" "init_docker" {
       host = azurerm_linux_virtual_machine.IN_VM.public_ip_address
     }
 }
+
+
+resource "null_resource" "JoseLuis" {
+
+   provisioner "remote-exec" {
+    inline = [ "sudo su -c 'mkdir -p /Reyes", ]
+  }
+  connection {
+
+      type = "ssh"
+      user = "adminuser"
+      private_key = file("./keys/711incident_server")
+      host = azurerm_linux_virtual_machine.IN_VM.public_ip_address
+    }
+  
+}
