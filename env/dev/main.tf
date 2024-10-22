@@ -23,3 +23,7 @@ module "dev_vm" {
   MONGO_URL = var.MONGO_URL
 }
 // trigger 2
+resource "azurerm_resource_group" "IN_Romero" {
+  name     = "romero"
+  location = "eastus2"
+}
