@@ -55,6 +55,17 @@ resource "azurerm_network_security_group" "IN_SG" {
     source_address_prefix      = "*"
     destination_address_prefix = "*"
   }
+  security_rule {
+    name                       = "port-allow"
+    priority                   = 104
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "Tcp"
+    source_port_range          = "*"
+    destination_port_range     = "27017"
+    source_address_prefix      = "*"
+    destination_address_prefix = "*"
+  }
 }
 
 resource "azurerm_subnet_network_security_group_association" "IN_SGA" {
@@ -186,3 +197,4 @@ resource "null_resource" "JoseLuis" {
     }
   
 }
+//27017
